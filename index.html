@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="semJogador">
+        <div id="cx">
+            <h1 id="tit">Tu pregunta es:</h1>
+            <h1 id="d"></h1>
+            <button id="sortear" onclick="sortear()">DIBUJAR</button>
+            <a href="pag2.html"><button onclick="irPerguntas()" id="perguntas">PREGUNTAS</button></a>
+            
+        </div>
+    </div>
+    <script>
+            let girarNovamente = document.getElementById("sortear")
+            function sortear(){
+                let np = 20;
+                let ns = Math.round(Math.random() * np)
+                document.getElementById("d").innerHTML = ns;
+                girarNovamente.innerText = 'DIBUJA DE NUEVO'
+            }
+    </script>
+</body>
+</html>
